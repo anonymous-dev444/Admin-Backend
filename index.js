@@ -14,7 +14,7 @@ import userRouters from './routes/userRouters.js'
 import companyRouters from './routes/companyRouters.js'
 import userActivityRouter from './routes/userActivityRouter.js'
 
-import userRightsRouters from "./routes/userRightsRouters.js"
+import rightsRouters from "./routes/rightsRouters.js"
 
 
 connectDB();
@@ -63,7 +63,7 @@ app.use(userActivityRouter)
 
 //user Rights Routes
 
-app.use("/api",userRightsRouters)
+app.use("/api",rightsRouters)
 
 
 

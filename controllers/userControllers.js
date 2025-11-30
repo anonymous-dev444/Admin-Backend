@@ -95,7 +95,7 @@ export const editUser = async (req, res) => {
         }
         // Update user safely and return the new document
         const updatedUser = await userModel.findOneAndUpdate(
-            { user_id: id },
+            {_id: id },
             {
                 $set: updateFields,
             },
@@ -165,7 +165,7 @@ export const changeUserPassword = async (req, res) => {
     const { password } = req.body
 
     //getting logedin user data
-    const { user_id, role } = req.user;
+    const { doc_id, role } = req.user;
     //getting logged in user ip 
     const { ip, os, browser, browserVersion } = req.clientDetails;
 
